@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/theme/app_colors.dart';
+import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -12,6 +13,7 @@ class _SettingsState extends State<Settings> {
   // 1. نقلنا المتغيرات هنا جوه الـ State عشان الـ setState تشتغل صح
   bool _isDarkMode = false;
   bool _isNotificationsOn = true;
+    //  int _currentIndex = 3;
   @override
   Widget build(BuildContext context) {
     
@@ -125,6 +127,21 @@ class _SettingsState extends State<Settings> {
           ),
         ),
       ),
+//   bottomNavigationBar: CustomBottomNavBar(
+//   currentIndex: _currentIndex,
+//   onTap: (index) {
+//     setState(() {
+//       _currentIndex = index;
+//     });
+//   },
+// ),
+    
+    
+   
+   
+   
+   
+   
     );
   }
 

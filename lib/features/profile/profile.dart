@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -8,7 +9,7 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  int _currentIndex = 0;
+ // int _currentIndex = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -84,6 +85,19 @@ buildCardSection(
   ],
 ),
 
+            const SizedBox(height: 16),
+buildCardSection(
+      children: [
+       buildCardTile(
+       title: 'Logout ',
+       subtitle: 'Sara Mohamed ',
+       icon: Icons.logout_outlined,
+        onTap: () {},
+        showDivider: false,
+                ),
+              ],
+            ),
+
             // ListTile(
             //   leading: const Icon(Icons.receipt_long_outlined),
             //   title: const Text('My Orders'),
@@ -112,51 +126,19 @@ buildCardSection(
             //   trailing: const Icon(Icons.arrow_forward_ios),
             //   onTap: () {},
             // ),
-             const SizedBox(height: 16),
-            buildCardSection(
-              children: [
-                buildCardTile(
-                  title: 'Logout ',
-                  subtitle: 'Sara Mohamed ',
-                  icon: Icons.logout_outlined,
-                  onTap: () {},
-                  showDivider: false,
-                ),
-              ],
-            ),
+ 
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        selectedItemColor: const Color.fromARGB(255, 51, 80, 45),
-        unselectedItemColor: Colors.grey,
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shop),
-            label: 'Shop',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
-      ),
+//     bottomNavigationBar: CustomBottomNavBar(
+//   currentIndex: _currentIndex,
+//   onTap: (index) {
+//     setState(() {
+//       _currentIndex = index;
+//     });
+//   },
+// ),
+    
     );
   }
 

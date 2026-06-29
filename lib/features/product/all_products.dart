@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 
 class AllProducts extends StatefulWidget {
   const AllProducts({super.key});
@@ -67,7 +68,8 @@ const List<ProductModel> products = [
 ];
 
 class _AllProductsState extends State<AllProducts> {
-    int _currentIndex = 0;
+ // int _currentIndex = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +88,7 @@ class _AllProductsState extends State<AllProducts> {
           ),
         ],
       ),
+    
       body: ListView.builder(
         padding: const EdgeInsets.all(16),
         itemCount: products.length,
@@ -172,7 +175,7 @@ class _AllProductsState extends State<AllProducts> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      child: const Icon(Icons.shopping_cart_outlined),
+                      child: const Icon(Icons.shopping_cart_outlined), //====الايقون 
                     ),
                   ),
                 ],
@@ -181,54 +184,14 @@ class _AllProductsState extends State<AllProducts> {
           );
         },
       ),
-    
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        selectedItemColor: const Color.fromARGB(255, 51, 80, 45),
-        unselectedItemColor: Colors.grey,
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-
-
-       BottomNavigationBarItem(
-          icon: Icon(Icons.shop),
-          label: 'Shop',
-        ),
-     
-         BottomNavigationBarItem(
-          icon: Icon(Icons.person_outline),
-          label: 'Profile',
-        ),
-       
-      
-      BottomNavigationBarItem(
-          icon: Icon(Icons.settings),
-          label: 'Settings',
-        ),
-        ],
-      ),
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+      // bottomNavigationBar: CustomBottomNavBar(
+      //   currentIndex: _currentIndex,
+      //   onTap: (index) {
+      //     setState(() {
+      //       _currentIndex = index;
+      //     });
+      //   },
+      // ),
     );
   }
 }

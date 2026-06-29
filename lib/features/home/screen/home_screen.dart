@@ -2,11 +2,12 @@
 import 'package:flutter/material.dart' hide SearchBar;
 import 'package:flutter_application_1/features/profile/profile.dart';
 import 'package:flutter_application_1/features/settings/setting.dart';
+//import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 //import 'package:flutter_application_1/features/settings/setting.dart';
 import '../widgets/product_widget.dart';
 import '../widgets/search_bar.dart';
 import '../widgets/category_list.dart';
-import '../widgets/bottom_nav.dart';
+// import '../widgets/bottom_nav.dart';
 import '../../product/all_products.dart';
 
 
@@ -30,7 +31,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 0;
+ // int _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -74,26 +75,17 @@ class _HomeScreenState extends State<HomeScreen> {
     ),
   ),
 ),
-   
+ 
 
-  bottomNavigationBar: CustomBottomNavBar(
-  currentIndex: _currentIndex,
-  onTap: (index) {
-    if (index == 2) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const Profile(),
-        ),
-      );
-      return;
-    }
 
-    setState(() {
-      _currentIndex = index;
-    });
-  },
-),
+  // bottomNavigationBar: CustomBottomNavBar(
+  //       currentIndex: _currentIndex,
+  //       onTap: (index) {
+  //         setState(() {
+  //           _currentIndex = index;
+  //         });
+  //       },
+  //     ),
 
 
         );

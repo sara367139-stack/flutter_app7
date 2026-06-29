@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/home/screen/scaroll.dart';
 
 //import 'package:flutter_application_1/features/home/screen/shop.dart';
 //import 'core/theme/app_theme.dart';
 //import 'features/home/screen/home_screen.dart';
-import 'features/home/screen/home_screen.dart';
+//import 'features/home/screen/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-          home:HomeScreen(),
+          home:Scaroll(),
     );
   }
 }
