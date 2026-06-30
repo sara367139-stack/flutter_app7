@@ -12,6 +12,6 @@ class AppColors {
 
   static const Color grey = Colors.grey;
 
-  static const Color success = Colors.green;
+  static const Color success = Color.fromARGB(255, 35, 42, 189);
   static const Color error = Colors.red;
 }

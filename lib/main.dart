@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/features/home/screen/scaroll.dart';
-
+import 'package:flutter_application_1/features/auth/login_screen.dart';
+//import 'package:flutter_application_1/features/home/screen/scaroll.dart';
+//import 'package:flutter_application_1/features/auth/screen/login_screen.dart';
 //import 'package:flutter_application_1/features/home/screen/shop.dart';
 //import 'core/theme/app_theme.dart';
 //import 'features/home/screen/home_screen.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-          home:Scaroll(),
+          home:LoginScreen(),
     );
   }
 }

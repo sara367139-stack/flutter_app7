@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart' hide SearchBar;
 import 'package:flutter_application_1/features/profile/profile.dart';
 import 'package:flutter_application_1/features/settings/setting.dart';
+//import 'package:flutter_application_1/features/home/screen/scaroll.dart';
 //import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 //import 'package:flutter_application_1/features/settings/setting.dart';
 import '../widgets/product_widget.dart';
@@ -9,6 +10,7 @@ import '../widgets/search_bar.dart';
 import '../widgets/category_list.dart';
 // import '../widgets/bottom_nav.dart';
 import '../../product/all_products.dart';
+
 
 
 
