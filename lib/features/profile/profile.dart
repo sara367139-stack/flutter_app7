@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
+//import 'package:flutter_application_1/features/home/widgets/bottom_nav.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
